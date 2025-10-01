@@ -51,8 +51,19 @@
  */
 public class App {
     // You will MODIFY THIS ONE METHOD across tasks 1–5. Do not create new methods.
-    public static void calculateDiscount() {
+    public static double calculateDiscount(String mode, double amount) {
 
+        if (amount < 0 || amount > 2000) {
+            return -1.0;
+        } if (mode.equals("percent")) {
+            return amount * 5.0;
+           } else if (mode.equals("fixed")){
+            return 20.0;
+
+           }
+        
+           return -1.0;
+        
     }
 
     public static void main(String[] args) {
@@ -60,29 +71,57 @@ public class App {
         // System.out.println("Task 1:");
         // calculateDiscount(); // should PRINT 5.0
 
+        // my code:
+        //System.out.println(5.0);
+
         // B range
         // System.out.println("Task 2:");
-        // calculateDiscount(20); // should PRINT 10.0
-        // calculateDiscount(50); // should PRINT 25.0
+        //calculateDiscount(20); // should PRINT 10.0
+        //calculateDiscount(50); // should PRINT 25.0
+
+        //my code:
+        // public static void calculateDiscount(double amount) {
+        //System.out.println(amount / 2.0);
+    
 
         // B+ range
         // System.out.println("Task 3:");
-        // double d1 = calculateDiscount(20); // expect 10.0
-        // double d2 = calculateDiscount(50); // expect 25.0
-        // System.out.println(d1);
-        // System.out.println(d2);
+         //double d1 = calculateDiscount(20); // expect 10.0
+       //double d2 = calculateDiscount(50); // expect 25.0
+        //System.out.println(d1);
+        //System.out.println(d2);
+
+        //my code:
+        //return amount / 2.0;
 
         // A range
         // System.out.println("Task 4:");
-        // System.out.println(calculateDiscount(-5));   // -1.0 (invalid)
-        // System.out.println(calculateDiscount(1000)); // 500.0 (valid)
-        // System.out.println(calculateDiscount(2001)); // -1.0 (too large)
+        //System.out.println(calculateDiscount(-5));   // -1.0 (invalid)
+        //System.out.println(calculateDiscount(1000)); // 500.0 (valid)
+        //System.out.println(calculateDiscount(2001)); // -1.0 (too large)
+
+        //my code:
+        //public static double calculateDiscount(double amount) {
+       //if (amount < 0 || amount > 2000) {
+       // return -1.0;
+       // }else {
+        //return amount / 2.0;
 
         // A+ range
         // System.out.println("Task 5:");
-        // System.out.println(calculateDiscount("percent", 200)); // 100.0
-        // System.out.println(calculateDiscount("fixed", 200));   // 20.0
-        // System.out.println(calculateDiscount("none", 200));    // -1.0 (unknown)
-        // System.out.println(calculateDiscount("percent", -1));  // -1.0 (invalid)
+       // System.out.println(calculateDiscount("percent", 200)); // 100.0
+        //System.out.println(calculateDiscount("fixed", 200));   // 20.0
+        //System.out.println(calculateDiscount("none", 200));    // -1.0 (unknown)
+        //System.out.println(calculateDiscount("percent", -1));  // -1.0 (invalid)
+
+        //my code:
+        // if (amount < 0 || amount > 2000) {
+        //return -1.0;
+        //} if (mode.equals("percent")) {
+        //return amount * 5.0;
+        //} else if (mode.equals("fixed")){
+        //return 20.0;}
+        
+        //return -1.0;
     }
 }
